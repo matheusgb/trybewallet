@@ -14,7 +14,11 @@ function wallet(state = INITIAL_STATE, action) {
       currencies: Object.keys(action.value),
       isFetching: false };
   case 'GET_EXPENSES':
-    return { ...state, expenses: action.value };
+    return { ...state, expenses: [...state.expenses, action.value] };
+  case 'DELETE':
+    return { ...state,
+      expenses: state.expenses
+        .filter((element) => element.id !== action.value) };
   default:
     return state;
   }

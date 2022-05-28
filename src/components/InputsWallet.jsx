@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { expenses, total } from '../actions';
+import { expenses } from '../actions';
 import fetchEconomia from '../services/EconomiaApi';
 import RequestExchange from '../services/request';
 
@@ -32,17 +32,8 @@ class InputsWallet extends React.Component {
 
 getExpense = () => {
   const { expense } = this.state;
-  const { dispatchTotal, dispatchExpenses } = this.props;
+  const { dispatchExpenses } = this.props;
   dispatchExpenses(expense);
-  // const teste = expense[0].exchangeRates[expense[0].currency];
-  // console.log(teste.ask);
-  // console.log(expense[0].value);
-  // console.log(parseFloat(expense[0].value) * teste.ask);
-
-  const reduzindo = expense.reduce((a, b) => a
-  + (parseFloat(b.value) * b.exchangeRates[b.currency].ask), 0).toFixed(2);
-
-  dispatchTotal(reduzindo);
   this.setState({
     value: '',
   });
@@ -63,7 +54,7 @@ getExpense = () => {
     };
 
     this.setState((prevState) => ({
-      expense: [...prevState.expense, obj],
+      expense: obj,
       id: prevState.id + 1,
     }), () => {
       this.getExpense();
@@ -168,11 +159,11 @@ InputsWallet.propTypes = {
 const mapStateToProps = (state) => ({
   currencies: state.wallet.currencies,
   loading: state.wallet.isFetching,
+  expens: state.wallet.expenses,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   dispatchExpenses: (value) => dispatch(expenses(value)),
-  dispatchTotal: (value) => dispatch(total(value)),
   fetching: () => dispatch(fetchEconomia()),
 });
 
