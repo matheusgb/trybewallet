@@ -55,7 +55,7 @@ class Inputs extends React.Component {
         <label htmlFor="senha">
           Senha:
           <input
-            type="text"
+            type="password"
             id="senha"
             data-testid="password-input"
             name="senhaInput"
