@@ -3,6 +3,8 @@ const INITIAL_STATE = {
   currencies: [],
   isFetching: false,
   expenses: [],
+  edit: false,
+  expenseEdit: [],
 };
 
 function wallet(state = INITIAL_STATE, action) {
@@ -19,6 +21,25 @@ function wallet(state = INITIAL_STATE, action) {
     return { ...state,
       expenses: state.expenses
         .filter((element) => element.id !== action.value) };
+  case 'EDIT':
+    return { ...state,
+      edit: true,
+      expenseEdit: action.value };
+  case 'SUBMIT':
+    return { ...state,
+      edit: false,
+      expenses: state.expenses.map((element) => {
+        const { id, value, description, currency, method, tag } = action.value;
+        if (element.id === id) {
+          element.value = value;
+          element.description = description;
+          element.currency = currency;
+          element.method = method;
+          element.tag = tag;
+        }
+        return element;
+      }),
+    };
   default:
     return state;
   }
