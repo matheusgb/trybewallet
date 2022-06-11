@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&family=Poppins&display=swap');
+
 :root {
   --background: #fafafa;
   --shadow: rgba(0, 0, 0, 0.25);
   --border: #ccc;
+  --button: #8bcc1a;
+  --button-hover: #6fa314;
 }
 
 * {
@@ -58,7 +62,7 @@ a {
   border: 1px solid var(--border);
   padding: 0 10px;
   margin-bottom: 10px;
-  background-color: #00a8ff;
+  background-color: var(--button);
   color: #fff;
   font-size: 16px;
   font-weight: bold;
@@ -66,11 +70,24 @@ a {
 }
 
 .login--button:hover {
-  background-color: #0097e6;
+  background-color: var(--button-hover);
 }
 
 .login--button:disabled {
   background-color: var(--border);
   color: black;
   cursor: not-allowed;
+}
+
+.logo--wallet {
+  width: 60px;
+  margin-bottom: 5px;
+}
+
+.logo--text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #8bcc1a;
+  margin-bottom: 20px;
 }
