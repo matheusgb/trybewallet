@@ -88,6 +88,6 @@ a {
   font-family: 'Poppins', sans-serif;
   font-size: 30px;
   font-weight: bold;
-  color: #8bcc1a;
+  color: var(--button);
   margin-bottom: 20px;
 }
