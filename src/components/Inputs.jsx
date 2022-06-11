@@ -39,40 +39,42 @@ class Inputs extends React.Component {
     const { emailInput, senhaInput, botaoDisable } = this.state;
     const { add } = this.props;
     return (
-      <div>
-        <label htmlFor="email">
-          Email:
-          <input
-            type="text"
-            id="email"
-            data-testid="email-input"
-            name="emailInput"
-            value={ emailInput }
-            onChange={ this.changeHandler }
-          />
-        </label>
+      <div className="login--container">
+        <div className="login--form">
+          <label htmlFor="email">
+            Email:
+            <input
+              type="text"
+              id="email"
+              data-testid="email-input"
+              name="emailInput"
+              value={ emailInput }
+              onChange={ this.changeHandler }
+            />
+          </label>
 
-        <label htmlFor="senha">
-          Senha:
-          <input
-            type="password"
-            id="senha"
-            data-testid="password-input"
-            name="senhaInput"
-            value={ senhaInput }
-            onChange={ this.changeHandler }
-          />
-        </label>
+          <label htmlFor="senha">
+            Senha:
+            <input
+              type="password"
+              id="senha"
+              data-testid="password-input"
+              name="senhaInput"
+              value={ senhaInput }
+              onChange={ this.changeHandler }
+            />
+          </label>
 
-        <Link to="/carteira">
-          <button
-            type="button"
-            disabled={ botaoDisable }
-            onClick={ () => add(emailInput) }
-          >
-            Entrar
-          </button>
-        </Link>
+          <Link to="/carteira">
+            <button
+              type="button"
+              disabled={ botaoDisable }
+              onClick={ () => add(emailInput) }
+            >
+              Entrar
+            </button>
+          </Link>
+        </div>
       </div>
     );
   }

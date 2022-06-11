@@ -1,0 +1,32 @@
+:root {
+  --background: #fafafa;
+  --shadow: rgba(0, 0, 0, 0.25)
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.login--container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+}
+
+.login--form {
+  width: 100%;
+  height: 50%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px var(--shadow);
+}
