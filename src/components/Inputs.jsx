@@ -41,7 +41,7 @@ class Inputs extends React.Component {
     return (
       <div className="login--container">
         <form className="login--form">
-          <label htmlFor="email">
+          <label htmlFor="email" className="label--container">
             <input
               className="login--input"
               type="text"
@@ -54,7 +54,7 @@ class Inputs extends React.Component {
             />
           </label>
 
-          <label htmlFor="senha">
+          <label htmlFor="senha" className="label--container">
             <input
               className="login--input"
               type="password"
@@ -69,6 +69,7 @@ class Inputs extends React.Component {
 
           <Link to="/carteira">
             <button
+              className="login--button"
               type="submit"
               disabled={ botaoDisable }
               onClick={ () => add(emailInput) }
