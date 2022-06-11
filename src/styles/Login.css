@@ -70,7 +70,7 @@ a {
 }
 
 .login--button:disabled {
-  background-color: #ccc;
-  color: #000;
+  background-color: var(--border);
+  color: black;
   cursor: not-allowed;
 }
