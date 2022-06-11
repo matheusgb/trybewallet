@@ -40,11 +40,12 @@ class Inputs extends React.Component {
     const { add } = this.props;
     return (
       <div className="login--container">
-        <div className="login--form">
+        <form className="login--form">
           <label htmlFor="email">
-            Email:
             <input
+              className="login--input"
               type="text"
+              placeholder="Digite seu email"
               id="email"
               data-testid="email-input"
               name="emailInput"
@@ -54,10 +55,11 @@ class Inputs extends React.Component {
           </label>
 
           <label htmlFor="senha">
-            Senha:
             <input
+              className="login--input"
               type="password"
               id="senha"
+              placeholder="Digite sua senha"
               data-testid="password-input"
               name="senhaInput"
               value={ senhaInput }
@@ -67,14 +69,14 @@ class Inputs extends React.Component {
 
           <Link to="/carteira">
             <button
-              type="button"
+              type="submit"
               disabled={ botaoDisable }
               onClick={ () => add(emailInput) }
             >
               Entrar
             </button>
           </Link>
-        </div>
+        </form>
       </div>
     );
   }
