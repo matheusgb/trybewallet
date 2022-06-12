@@ -6,7 +6,12 @@ class HeaderWallet extends React.Component {
   render() {
     const { email, expenses } = this.props;
     return (
-      <div>
+      <div className="header--wallet">
+        <img
+          src="https://cdn-icons.flaticon.com/png/512/855/premium/855279.png?token=exp=1655068779~hmac=b18b4605b319d87fd9729306bc8e3c4c"
+          alt="carteira"
+          className="logo--wallet"
+        />
         <p data-testid="email-field">{email}</p>
         <p data-testid="total-field">
           {expenses.length > 0
