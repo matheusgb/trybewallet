@@ -40,11 +40,6 @@ class Inputs extends React.Component {
     const { add } = this.props;
     return (
       <div className="login--container">
-        <img
-          src="https://cdn-icons.flaticon.com/png/512/855/premium/855279.png?token=exp=1655068779~hmac=b18b4605b319d87fd9729306bc8e3c4c"
-          alt="carteira"
-          className="logo--wallet"
-        />
         <p className="logo--text"> Trybe Wallet </p>
         <form className="login--form">
           <label htmlFor="email" className="label--container">
