@@ -99,6 +99,7 @@ getExpense = () => {
             name="description"
             onChange={ this.handleChange }
             value={ description }
+            maxLength="20"
           />
         </label>
 
