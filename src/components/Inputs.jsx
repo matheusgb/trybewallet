@@ -41,7 +41,7 @@ class Inputs extends React.Component {
     return (
       <div className="login--container">
         <img
-          src="https://cdn-icons.flaticon.com/png/512/855/premium/855279.png?token=exp=1654982465~hmac=f381a6036defbe494325f3ed7ca19d60"
+          src="https://cdn-icons.flaticon.com/png/512/855/premium/855279.png?token=exp=1655068779~hmac=b18b4605b319d87fd9729306bc8e3c4c"
           alt="carteira"
           className="logo--wallet"
         />
