@@ -1,0 +1,41 @@
+.header--wallet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #fafafa;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.inputs--wallet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #fafafa;
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 20px;
+}
+
+.all--table {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.head--table {
+  display: table-header-group;
+}
+
+.container--cels {
+  padding: 0.5rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.total {
+  display: flex;
+}
+
+.total p:first-child {
+  margin-right: 5px;
+}

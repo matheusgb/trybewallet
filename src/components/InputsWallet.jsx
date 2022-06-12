@@ -76,12 +76,12 @@ getExpense = () => {
     const { currencies, loading, edit } = this.props;
     const { value, tag, description, currency, method } = this.state;
     return (
-      <div>
+      <div className="inputs--wallet">
 
         <label htmlFor="valor">
           Valor:
           <input
-            type="text"
+            type="number"
             id="valor"
             data-testid="value-input"
             name="value"

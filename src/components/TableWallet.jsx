@@ -7,9 +7,9 @@ class TableWallet extends React.Component {
   render() {
     const { expenses, removeExpense, changingExpense } = this.props;
     return (
-      <table>
-        <thead>
-          <tr>
+      <table className="all--table">
+        <thead className="head--table">
+          <tr className="container--cels">
             <th> Descrição </th>
             <th> Tag </th>
             <th> Método de pagamento </th>
@@ -22,7 +22,7 @@ class TableWallet extends React.Component {
           </tr>
         </thead>
 
-        <tbody>
+        <tbody className="body--table">
           {expenses.map((element) => (
             <tr key={ element.id }>
               <td>{element.description}</td>
