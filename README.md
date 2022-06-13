@@ -1,4 +1,4 @@
-# Trybetunes
+# Trybewallet
 
 Projeto feito enquanto estudava na [Trybe](https://www.betrybe.com/), utilizando React, Class Components, Javascript, CSS e Redux no módulo de front-end. Coberto com 100% dos testes da Trybe.
 
